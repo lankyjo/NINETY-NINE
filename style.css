@@ -1,0 +1,430 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Smooch&display=swap");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: notche;
+    src: url(/cfnotchedemobold-5y1eb.otf);
+}
+:root{
+    --body-font: "Montserrat", sans-serif;
+    --second-font: "Smooch", cursive;
+    --biggest-font-size: 6rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+  
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-semi-bold: 600;
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+  @media screen and (min-width: 1150px) {
+    :root {
+      --biggest-font-size: 17rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+    }
+  }
+html, body{
+    width: 100%;
+    background: white;
+    font-family: "Montserrat", sans-serif;
+}
+video{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+a{
+    text-decoration: none;
+}
+.intro{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 10000;
+}
+.overlay, .white-overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 2;
+}
+.white-overlay{
+    background: white;
+    opacity: 0;
+}
+#introVideo{
+    transform-origin: top;
+}
+.intro-logo{
+    font-size: clamp(3rem, 0.4545rem + 12.7273vw, 6rem);
+    color: black;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    position: relative;
+    z-index: 10;
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translateX(-50%);
+    text-wrap: nowrap;
+    opacity: 0;
+    font-style: italic;
+    user-select: none;
+    pointer-events: none;
+}
+.container {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+    }
+
+    main {
+    overflow: hidden;
+}
+
+.home-container{
+    height: 100vh;
+    padding-block: 9rem 2rem;
+    display: grid;
+    align-items: center;
+    row-gap: 6rem;
+}
+
+.home-content{
+    position: relative;
+    display: grid;
+}
+.home-circle{
+    position: absolute;
+    inset: 0;
+    width: 280px;
+    height: 280px;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    margin-inline: auto;
+    display: grid;
+    user-select: none;
+    place-items: center;
+}
+.home-sub-circle{
+    width: 246px;
+    height: 246px;
+    border: 12px solid rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    user-select: none;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 1rem;
+    padding-top: 1vh;
+}
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 1.5rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-inline: 1rem;
+    /* padding-bottom: 1vh; */
+}
+footer p{
+    font-size: 13px;
+    font-weight: 600;
+}
+.header a{
+    color: black;
+    font-size: 2rem;
+}
+
+.home-title{
+    position: absolute;
+    font-size: clamp(3rem, 0.4545rem + 12.7273vw, 10rem);
+    font-family: notche;
+    font-style: italic;
+    font-weight: var(--font-regular);
+    white-space: nowrap;
+    color: rgba(0, 0, 0, 0.3);
+    user-select: none;
+}
+
+.home-img{
+    width: 400px;
+    max-width: 100%;
+    filter: drop-shadow(-8px 8px 15px hsla(34, 51%, 8%, .6));
+    margin: -5rem auto 1rem;
+    cursor: pointer;
+    user-select: none;
+}
+.home-article{
+    text-align: center;
+}
+
+.swiper{
+    margin-inline: initial;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    content: '';
+}
+
+.swiper-button-next, 
+.swiper-button-prev{
+    top: initial;
+    bottom: 0;
+    font-size: 1.5rem;
+    color: black;
+}
+.swiper-button-prev{
+    left: calc(50% - 8rem);
+}
+.swiper-button-next{
+    right: calc(50% - 8rem);
+}
+.product-page{
+    position: fixed;
+    width: 90%;
+    height: 90%;
+    padding: 1rem 2rem;
+    z-index: 100;
+    margin: auto;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    inset: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.product-page::-webkit-scrollbar {
+    width: 10px;
+}
+.product-image img{
+    max-width: 300px;
+    margin-inline: auto;
+}
+.product-page::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.8); /* Thumb color */
+    border-radius: 10px;            /* Make the thumb rounded */
+}
+
+.product-page::-webkit-scrollbar-track {
+    background: white; /* Track background color */
+    padding: 5px;      /* Adds padding inside the track */
+}
+.cancel-btn {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.product-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.place-order{
+    color: white;
+    background: black;
+    padding: 0.6rem 1.2rem;
+    border-radius: .5rem;
+}
+.cancel-btn span {
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    background: black;
+}
+
+.cancel-btn span:nth-child(1) {
+    transform: rotate(45deg); /* Rotates the first span 45 degrees */
+}
+
+.cancel-btn span:nth-child(2) {
+    transform: rotate(-45deg); /* Rotates the second span -45 degrees */
+}
+
+.product-page .logo{
+    margin-top: auto;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+    font-size: 10px;
+    padding: 3rem 0rem 1rem;
+}
+/* .product-image, .product-desc{
+    margin: 0;
+    padding: 0;
+} */
+.product-desc{
+    text-align: center;
+    margin-inline: auto;
+    max-width: 400px;
+}
+.product-desc p{
+    margin-bottom: 1rem;
+}
+.product-desc a{
+    color: black;
+    font-size: 1.2rem;
+    border-bottom: 1px solid black;
+}
+.product-page{
+    display: none;
+}
+.active{
+    display: flex;
+}
+@media (max-width: 330px) {
+    .container{
+        margin-inline: 1rem;
+    }
+    .home-img{
+        width: 500px;
+        margin-top: -6rem;
+        /* margin-bottom: 2rem; */
+    }
+    .home-container{
+    padding-block: 5rem 2rem;
+    }
+    .home-circle{
+        width: 240px;
+        height: 240px;
+    }
+    .home-product{
+        margin-bottom: 3rem;
+    }
+    .home-sub-circle{
+        width: 206px;
+        height: 206px;
+    }
+    .product-image img{
+        max-width: 200px;
+    }
+}
+@media (max-width:450px) {
+    .home-product{
+        margin-top: -5rem;
+    }
+    .home-product{
+        margin-bottom: 3rem;
+    }
+}
+@media (min-width:768px) {
+    .home-article{
+        scale: .6;
+        transition: scale .3s;
+    }
+    .home-product{
+        opacity: 0;
+        transition: .3s;
+    }
+    .home .swiper-slide-active{
+        scale: 1;
+    }
+    .swiper-slide-active :is(.home-product){
+        opacity: 1;
+    }
+    .product-desc{
+        max-width: 600px;
+    }
+}
+
+@media (min-width: 1152px){
+    .container{
+        margin-inline: auto;
+    }
+    .home-container{
+        height: initial;
+        padding-top: 10rem;
+    }
+    .home-swiper{
+        max-width: 1100px;
+        margin-inline: auto;
+    }
+    .home-circle{
+        width: 350px;
+        height: 350px;
+        border-width: 4px;
+    }
+    .home-sub-circle{
+        width: 385px;
+        height: 385px;
+        border-width: 20px;
+    }
+    .home-article{
+        width: 450px;
+        scale: .55;
+    }
+    .home-img{
+        width: 600px;
+        margin-top: -8rem;
+    }
+    .home-product{
+        margin-top: -5rem;
+    }
+    .header{
+        padding-inline: 3rem;
+        padding-top: 3vh;
+    }
+    body{
+        overflow: hidden;
+    }
+    .product-page{
+        flex-direction: row;
+        column-gap: 2em;
+    }
+    .product-image img{
+        max-width: 100%;
+    }
+    .product-desc{
+        text-align: left;
+        margin-inline: auto;
+        max-width: 600px;
+    }
+    .product-page .logo{
+        text-wrap: nowrap;
+        text-align: end;
+    }
+    .cancel-btn{
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+    }
+    .place-order{
+        opacity: 0;
+    }
+}
