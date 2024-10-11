@@ -130,13 +130,7 @@ a{
     user-select: none;
     place-items: center;
 }
-.home-sub-circle{
-    width: 246px;
-    height: 246px;
-    border: 12px solid rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    user-select: none;
-}
+
 .header{
     position: fixed;
     top: 0;
@@ -170,13 +164,12 @@ footer p{
 
 .home-title{
     position: absolute;
-    font-size: clamp(3rem, 0.4545rem + 12.7273vw, 10rem);
-    font-family: notche;
-    font-style: italic;
+    /* font-size: clamp(3rem, 0.4545rem + 12.7273vw, 10rem); */
     font-weight: var(--font-regular);
     white-space: nowrap;
-    color: rgba(0, 0, 0, 0.3);
+    color: rgb(0, 0, 0);
     user-select: none;
+    top: -2rem;
 }
 
 .home-img{
