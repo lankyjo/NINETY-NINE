@@ -228,7 +228,7 @@ footer p{
 .product-page::-webkit-scrollbar {
     width: 10px;
 }
-.product-image, .product-image img{
+.product-image, .product-image img, .home-article, .home-img{
     user-select: none;
     pointer-events: none;
 }
