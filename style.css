@@ -231,7 +231,6 @@ footer p{
 }
 .product-image, .product-image img, .home-article, .home-img{
     user-select: none;
-    pointer-events: none;
 }
 .product-image img{
     max-width: 300px;
