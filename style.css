@@ -82,8 +82,8 @@ a{
     font-weight: 600;
     position: relative;
     z-index: 10;
-    position: absolute;
-    top: 50vh;
+    position: fixed;
+    top: 40vh;
     left: 50%;
     transform: translateX(-50%);
     text-wrap: nowrap;
@@ -188,6 +188,7 @@ footer p{
 
 .swiper{
     margin-inline: initial;
+    overflow-y: hidden;
 }
 
 .swiper-button-prev::after,
